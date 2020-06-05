@@ -17,32 +17,23 @@
 <body>
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
-
-				<!-- Intro and Search -->
-					<section class="banner style1 orient-right content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-left">
+			
+				<!-- Your Playlist Results -->
+					<section class="banner style1 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
-							<h1>Playlist Maker</h1>
-							<p class="major"><!--[-->Welcome to Playlist Maker, a web app that lets you make a Spotify playlist 
-							full of songs by your favorite artist and artists who are similar to them. Just enter the 
-							name of an artist in the box below and click Make Playlist.<!--]--></p>
-		
-							<form method="GET">
-								<div class="field">
-									<input type="text" name="artist_to_search" placeholder="Ex: Davido" required />
-								</div>										
-								<ul class="actions vertical">
-									<li><input type="submit" name="submit" id="submit" value="Make Playlist" class="button special"/></li>
-								</ul>
-							</form>	
+							<h2>Here's Your Playlist</h2>
+							<p>Your playlist is full of popular songs by {{ artist_name }}. Enjoy! 
+							<br /><a href="{% 'index' %}">Click here to make another playlist.</a></p>
+							<!--Change player them by pasting or removing &theme=white at the end of playlist url. -->
+							<iframe src="{{ frame }}" width="100%" height="300" frameborder="0" allowtransparency="true"></iframe>
 						</div>
-	
 						<div class="image">
-							<img src="../static/images/funky_woman_with_headphones.jpg" alt="funky woman with headphones" />
+							<img src="{{ image }}" alt="image of artist you searched for" />
 						</div>
-						
-					</section>
-		
-			</div>				
+					</section>	
+										
+			</div>		
+					
 
 	
 			<!-- Scripts -->
