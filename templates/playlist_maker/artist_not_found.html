@@ -28,7 +28,7 @@
 							Please check the spelling and try again or search for another artist. Just enter the 
 							name of an artist in the box below and click Make Playlist.<!--]--></p>
 		
-							<form method="GET" >
+							<form method="GET" action="{% url 'playlist_maker:index' %}">
 								<div class="field">
 									<input type="text" name="artist_to_search" placeholder="Ex: Laleh" required />
 								</div>										

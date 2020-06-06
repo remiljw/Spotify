@@ -26,7 +26,7 @@
 							full of songs by your favorite artist and artists who are similar to them. Just enter the 
 							name of an artist in the box below and click Make Playlist.<!--]--></p>
 		
-							<form method="GET">
+							<form method="GET" action="{% url 'playlist_maker:show_playlist' %}" > 
 								<div class="field">
 									<input type="text" name="artist_to_search" placeholder="Ex: Davido" required />
 								</div>										
